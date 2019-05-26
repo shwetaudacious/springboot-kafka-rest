@@ -20,7 +20,7 @@ public class ReceiveController {
 		return latch;
 	}
 
-	@KafkaListener(topics = "${spring.kafka.template.default-topic}")
+	@KafkaListener(topics = "demo-topic")
 	public void getMessage(String message) {
 		log.debug("recieved message: " + message);
 	}
